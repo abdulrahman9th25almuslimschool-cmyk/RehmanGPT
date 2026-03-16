@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ur">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>RehmanGPT UI</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app" id="app">
+
+      <!-- Mobile overlay -->
+      <div class="overlay" id="overlay"></div>
+
+      <!-- SIDEBAR -->
+      <div class="sidebar" id="sidebar">
+        <div class="sidebar-top">
+          <span class="logo">RehmanGPT</span>
+          <button class="new-btn" id="newChatBtn">+ New</button>
+        </div>
+
+        <span class="section-label">Today</span>
+        <div class="chat-item active">Python loop ka sawal</div>
+        <div class="chat-item">CSS flexbox tutorial</div>
+        <div class="chat-item">Resume likhne ki madad</div>
+
+        <span class="section-label">Yesterday</span>
+        <div class="chat-item">API integration</div>
+        <div class="chat-item">JavaScript promises</div>
+
+        <div class="sidebar-bottom">
+          <div class="user-row">
+            <div class="avatar">RA</div>
+            <span class="user-name">REHMAN ASIF</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- MAIN -->
+      <div class="main">
+        <div class="top-bar">
+          <button class="hamburger" id="hamburger">&#9776;</button>
+          <span class="model-badge">GPT-1 <span class="model-arrow">&#9660;</span></span>
+          <span class="screen-tag" id="screenTag"></span>
+        </div>
+
+        <div class="messages" id="messages">
+          <div class="msg-row">
+            <div class="msg-avatar ai">AI</div>
+            <div class="bubble ai">Assalam o Alaikum! Koi bhi sawal poochein, main yahan hoon.</div>
+          </div>
+          <div class="msg-row user">
+            <div class="msg-avatar uav">RA</div>
+            <div class="bubble user">Python mein for loop ka syntax kya hota hai?</div>
+          </div>
+          <div class="msg-row">
+            <div class="msg-avatar ai">AI</div>
+            <div class="bubble ai">
+              Bilkul! Yeh simple example hai:<br><br>
+              <code>for i in range(5): print(i)</code><br><br>
+              Yeh 0 se 4 tak numbers print karega.
+            </div>
+          </div>
+          <div class="msg-row user">
+            <div class="msg-avatar uav">RA</div>
+            <div class="bubble user">Shukriya! While loop bhi batao.</div>
+          </div>
+          <div class="msg-row" id="typingRow">
+            <div class="msg-avatar ai">AI</div>
+            <div class="bubble ai">
+              <div class="typing">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="input-area">
+          <div class="input-box">
+            <textarea class="msg-input" id="msgInput" rows="1" placeholder="Koi bhi sawal poochein..."></textarea>
+            <button class="send-btn" id="sendBtn">
+              <svg class="send-icon" viewBox="0 0 24 24">
+                <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+              </svg>
+            </button>
+          </div>
+          <div class="footer-note">AI galat bhi ho sakta hai — important faisle khud verify karein.</div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
